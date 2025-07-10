@@ -1,0 +1,111 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --primary-color: #5a67d8;
+  --secondary-color: #4c51bf;
+  --accent-color: #e53e3e;
+  --background-color: #f7fafc;
+  --text-color: #2d3748;
+  --border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 2.5rem 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 20px rgba(90, 103, 216, 0.15);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px rgba(76, 81, 191, 0.7);
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline-offset: 2px;
+  margin-bottom: 1.5rem;
+}
+
+input[type="number"]:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px var(--secondary-color);
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  color: white;
+  -webkit-user-select: none; /* Add this */
+  user-select: none;
+  flex: 1;
+}
+
+.btn.submit {
+  background: var(--primary-color);
+}
+
+.btn.submit:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 6px 12px rgba(76, 81, 191, 0.5);
+}
+
+.btn.reset {
+  background: var(--accent-color);
+}
+
+.btn.reset:hover {
+  background: #c53030;
+  box-shadow: 0 6px 12px rgba(229, 62, 62, 0.5);
+}
+
+#feedback {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-color);
+  min-height: 2.2rem;
+  -webkit-user-select: none;  /* Add this */
+  user-select: none;
+  padding: 0 0.25rem;
+}
